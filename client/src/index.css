@@ -1,24 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 body {
-  background: #282c34;
-  color: #fff;
+  background: linear-gradient(to right, #ffffff, #282c34);
+  color: #000000;
   font-family: 'Open Sans', sans-serif;
   padding: 30px;
   text-align: center;
 }
 
 h1 {
-  font-weight: lighter;
+  color: #3abdae;
+  font-weight: 900;
+  font-size: 60px;
+  text-shadow: 2px 2px 0 black;
+  animation: zoomInOut 3s 3;
 }
 
-p {
-  color: #999;
-  font-size: 0.8rem;
+@keyframes zoomInOut {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+  text-shadow: 2px 2px 0 #e96c66;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .btn {
-  background: #0064e7;
+  background: #3abdae;
   border: none;
   border-radius: 15px;
   padding: 10px 25px;
@@ -32,27 +52,38 @@ p {
 }
 
 .btn:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px #ffffff;
 }
 
 .btn--red {
-  background: #e74c3c;
+  background: #e96c66;
 }
 
 .text-input {
-  background: none;
+  width: 230px;
+  background: #f7f7f1;
   border: none;
-  color: #fff;
-  border-bottom: 2px solid #0064e7;
+  color: #000000;
+  border-bottom: 2px solid #3abdae;
   padding: 8px 25px 8px 5px;
   font-family: inherit;
   outline: none;
   opacity: 0.6;
   transition: .3s;
+  box-shadow: 0 0 20px #ffffff;
+  text-align: center;
+  margin-right: 40px;
 }
 
 .text-input:focus {
   opacity: 1;
+  background-color: #a9e9e2;
+  color: #000000;
+}
+
+.text-input::placeholder {
+  color: #149384;
+  text-align: center;
 }
 
 
@@ -68,6 +99,8 @@ p {
 }
 
 .task {
+  font-weight: 600;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
